@@ -15,7 +15,7 @@ export default function Detail() {
 
   return (
     <div>
-      <Link to="/">{`<= 홈으로`}</Link>
+      <Link to={`${process.env.PUBLIC_URL}/`}>{`<= 홈으로`}</Link>
       {loading && <div>영화 상세 정보 로딩 중...</div>}
       {movie && (
         <div>

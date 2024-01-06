@@ -52,7 +52,7 @@ export default function Home() {
         {movies &&
           movies.map((movie) => (
             <li key={movie.id}>
-              <Link to={`/movies/${movie.id}`} state={{ movie }}>
+              <Link to={`${process.env.PUBLIC_URL}/movies/${movie.id}`} state={{ movie }}>
                 <img src={movie.medium_cover_image} alt={movie.title} />
               </Link>
               <Title>{movie.title}</Title>
