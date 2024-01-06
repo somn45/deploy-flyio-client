@@ -34,6 +34,7 @@ export default function Home() {
   const [movies, setMovies] = useState<Movie[] | null>(null);
   useEffect(() => {
     getMovies();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getMovies = async () => {
@@ -52,7 +53,10 @@ export default function Home() {
         {movies &&
           movies.map((movie) => (
             <li key={movie.id}>
-              <Link to={`${process.env.PUBLIC_URL}/movies/${movie.id}`} state={{ movie }}>
+              <Link
+                to={`${process.env.PUBLIC_URL}/movies/${movie.id}`}
+                state={{ movie }}
+              >
                 <img src={movie.medium_cover_image} alt={movie.title} />
               </Link>
               <Title>{movie.title}</Title>

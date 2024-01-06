@@ -11,6 +11,7 @@ export default function Detail() {
     const movie: Movie = state.movie;
     setMovie(movie);
     setLoading(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
