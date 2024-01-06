@@ -6,11 +6,11 @@ import Detail from './router/Detail';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: process.env.PUBLIC_URL + "/",
     element: <Home />,
   },
   {
-    path: '/movies/:id',
+    path: process.env.PUBLIC_URL + '/movies/:id',
     element: <Detail />,
   },
 ]);
