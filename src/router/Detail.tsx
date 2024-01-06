@@ -16,7 +16,7 @@ export default function Detail() {
   return (
     <div>
       <Link to="/">{`<= 홈으로`}</Link>
-      {loading && <div>영화 상세 정보 로딩 중.....</div>}
+      {loading && <div>영화 상세 정보 로딩 중...</div>}
       {movie && (
         <div>
           <img src={movie.medium_cover_image} alt={movie.title} />
