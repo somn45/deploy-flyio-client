@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/deploy-flyio-client/static/js/main.4f4dc400.js",
+    "index.html": "/deploy-flyio-client/index.html",
+    "main.4f4dc400.js.map": "/deploy-flyio-client/static/js/main.4f4dc400.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.4f4dc400.js"
+  ]
+}
