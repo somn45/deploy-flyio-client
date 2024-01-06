@@ -48,6 +48,7 @@ export default function Home() {
   return (
     <div>
       <h1>안녕하세요~ 최근 영화를 소개합니다!</h1>
+      <h5>이미지를 클릭 시 영화 상세 정보를 확인할 수 있습니다.</h5>
       <MovieList>
         {loading && <li>영화 리스트 로딩 중...</li>}
         {movies &&
