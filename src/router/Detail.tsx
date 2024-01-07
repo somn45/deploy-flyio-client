@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Movie } from './Home';
+import axios from 'axios';
 
 export default function Detail() {
   const [loading, setLoading] = useState(true);
@@ -14,9 +15,16 @@ export default function Detail() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const hello = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const response = await axios.get('https://flyio-server3001.fly.dev/movie');
+    console.log(response);
+  };
+
   return (
     <div>
       <Link to={`${process.env.PUBLIC_URL}/`}>{`<= 홈으로`}</Link>
+      <button onClick={hello}>메시지 받기</button>
       {loading && <div>영화 상세 정보 로딩 중.....</div>}
       {movie && (
         <div>

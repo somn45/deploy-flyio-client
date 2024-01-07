@@ -39,7 +39,7 @@ export default function Home() {
 
   const getMovies = async () => {
     const response: GetMoviesResponse = await axios.get(
-      'http://localhost:3001'
+      'https://flyio-server3001.fly.dev'
     );
     setMovies(response.data.movies);
     setLoading(false);
