@@ -58,7 +58,7 @@ export default function Home() {
                 to={
                   process.env.NODE_ENV === 'development'
                     ? `/movies/${movie.id}`
-                    : process.env.REACT_APP_URL + `/movies/${movie.id}`
+                    : process.env.PUBLIC_URL + `/movies/${movie.id}`
                 }
                 state={{ movie }}
               >

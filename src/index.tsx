@@ -9,14 +9,14 @@ const router = createBrowserRouter([
     path:
       process.env.NODE_ENV === 'development'
         ? '/'
-        : process.env.REACT_APP_URL + '/',
+        : process.env.PUBLIC_URL + '/',
     element: <Home />,
   },
   {
     path:
       process.env.NODE_ENV === 'development'
         ? '/movies/:id'
-        : process.env.REACT_APP_URL + '/movies/:id',
+        : process.env.PUBLIC_URL + '/movies/:id',
     element: <Detail />,
   },
 ]);

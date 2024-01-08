@@ -27,7 +27,7 @@ export default function Detail() {
         to={
           process.env.NODE_ENV === 'development'
             ? `/`
-            : process.env.REACT_APP_URL + `/`
+            : process.env.PUBLIC_URL + `/`
         }
       >{`<= 홈으로`}</Link>
       <button onClick={hello}>메시지 받기</button>
