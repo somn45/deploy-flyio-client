@@ -6,11 +6,17 @@ import Detail from './router/Detail';
 
 const router = createBrowserRouter([
   {
-    path: process.env.REACT_APP_URL + '/',
+    path:
+      process.env.NODE_ENV === 'development'
+        ? '/'
+        : process.env.REACT_APP_URL + '/',
     element: <Home />,
   },
   {
-    path: process.env.REACT_APP_URL + '/movies/:id',
+    path:
+      process.env.NODE_ENV === 'development'
+        ? '/movies/:id'
+        : process.env.REACT_APP_URL + '/movies/:id',
     element: <Detail />,
   },
 ]);
