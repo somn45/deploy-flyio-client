@@ -17,13 +17,13 @@ export default function Detail() {
 
   const hello = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    const response = await axios.get('https://flyio-server3001.fly.dev/movie');
+    const response = await axios.get('https://flyio-server3001.fly.dev/hello');
     console.log(response);
   };
 
   return (
     <div>
-      <Link to={`${process.env.PUBLIC_URL}/`}>{`<= 홈으로`}</Link>
+      <Link to={`${process.env.REACT_APP_URL}/`}>{`<= 홈으로`}</Link>
       <button onClick={hello}>메시지 받기</button>
       {loading && <div>영화 상세 정보 로딩 중.....</div>}
       {movie && (

@@ -55,7 +55,7 @@ export default function Home() {
           movies.map((movie) => (
             <li key={movie.id}>
               <Link
-                to={`${process.env.PUBLIC_URL}/movies/${movie.id}`}
+                to={`${process.env.REACT_APP_URL}/movies/${movie.id}`}
                 state={{ movie }}
               >
                 <img src={movie.medium_cover_image} alt={movie.title} />
